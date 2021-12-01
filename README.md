@@ -1,24 +1,31 @@
-# README
+# <大人の語彙力ドリル>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+<クイズゲームで丁寧な語彙力を高められるアプリ>
 
-Things you may want to cover:
+### サイトテーマ
+<４択クイズに答えて大人の丁寧な語彙力を高めていく>
 
-* Ruby version
+### テーマを選んだ理由
+<目上の方と接する際の言葉遣いはとても気を遣います。さっき話した言葉はこれで合っていたかと気にする事が多々あります。
+しかし、丁寧な大人の言葉遣いを学ぶ場所があまりありません。それなら丁寧な言葉遣いを楽しく学べるモノを作れば、楽しみながら丁寧な大人の語彙力が高まり、自然と話せるようになると思い、このテーマに決めました。>
 
-* System dependencies
+### ターゲットユーザ
 
-* Configuration
+<丁寧な言葉遣いを身につけたい人>
 
-* Database creation
+### 主な利用シーン
+<隙間時間などの暇つぶしの時や、目上の方に会う前の下準備をする際にも活用できます。>
 
-* Database initialization
+## 設計書
+<...>
 
-* How to run the test suite
+## チャレンジ要素一覧
+<https://docs.google.com/spreadsheets/d/1KUJ3mJBVizYaZTJWbbPPcHS0skJlHrlKBW9A3Ha-Ikk/edit?usp=sharing>
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
