@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-#   get 'homes/index'
-
-root 'homes#index'
+# 
+root 'homes#top'
 
   # 顧客用
 # URL /customers/sign_in ...
