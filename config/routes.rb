@@ -16,10 +16,11 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
   namespace :admin do
     root "homes#top"
     resources :genres, only: [:index, :create, :edit, :update]
+    resources :questions, only: [:index, :new, :create, :show, :edit, :update]
   end
   
   scope module: :public do
     root "homes#top"
-  end    
+  end
 
 end
