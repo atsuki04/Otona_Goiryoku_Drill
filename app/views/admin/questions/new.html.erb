@@ -1,2 +1,11 @@
 <h2>問題作成</h2>
-  
+<table class="table table-hover table-bordered table-inverse">
+  <%= form_with model: @question, url: admin_questions_path, local:true do |f| %>
+    <%= f.text_field :question ,placeholder: "問題" %>
+    <%= f.text_field :choice_1 ,placeholder: "選択肢1" %>
+    <%= f.text_field :choice_2 ,placeholder: "選択肢2" %>
+    <%= f.text_field :choice_answer ,placeholder: "正解の選択肢" %>
+    <%= f.text_field :explanation ,placeholder: "解説" %>
+    
+  <% end %>
+</table>  
