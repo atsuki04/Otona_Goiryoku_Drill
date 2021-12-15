@@ -21,7 +21,9 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
   
   scope module: :public do
     root "homes#top"
-    resources :questions, only: [:index, :show]
+    resources :questions, only: [:index, :show] do 
+      get :answer
+    end
   end
 
 end
