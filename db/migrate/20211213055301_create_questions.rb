@@ -7,6 +7,7 @@ class CreateQuestions < ActiveRecord::Migration[5.2]
       t.string :choice_2
       t.string :choice_answer
       t.string :explanation
+      t.references :genre, foreign_key: true
       t.timestamps
     end
   end

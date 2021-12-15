@@ -44,19 +44,16 @@ ActiveRecord::Schema.define(version: 2021_12_13_055301) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "levels", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "questions", force: :cascade do |t|
     t.string "question"
     t.string "choice_1"
     t.string "choice_2"
     t.string "choice_answer"
     t.string "explanation"
+    t.integer "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["genre_id"], name: "index_questions_on_genre_id"
   end
 
 end

@@ -5,15 +5,15 @@
   <p>問題:<%= question.question %></p>
   <% n = rand(2) %>
   <% if n == 0 %>
-    選択肢:<%=question.choice_answer %><br>
+    選択肢:<%= question.choice_answer %><br>
     選択肢:<%= question.choice_1 %><br>
     選択肢:<%= question.choice_2 %><br>
   <% elsif n == 1 %>
-    選択肢:<%=question.choice_1 %><br>
+    選択肢:<%= question.choice_1 %><br>
     選択肢:<%= question.choice_2 %><br>
     選択肢:<%= question.choice_answer %><br>
   <% else %>
-    選択肢:<%=question.choice_2 %><br>
+    選択肢:<%= question.choice_2 %><br>
     選択肢:<%= question.choice_answer %><br>
     選択肢:<%= question.choice_1 %><br>
   <% end %>
