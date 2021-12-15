@@ -1,1 +1,4 @@
 <h2>問題一覧</h2>
+<% @questions.each do |question| %>
+  <%= link_to question.question, admin_question_path(question) %>
+<% end %>

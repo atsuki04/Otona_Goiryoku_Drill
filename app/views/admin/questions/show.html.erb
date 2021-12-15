@@ -1,0 +1,13 @@
+<h2>問題の詳細</h2>
+<h4>問題</h4>
+<%= @question.question %>
+<h4>ジャンル</h4>
+<%= @question.genre.name %>
+<h4>選択肢１</h4>
+<%= @question.choice_1 %>
+<h4>選択肢２</h4>
+<%= @question.choice_2 %>
+<h4>正解の選択肢</h4>
+<%= @question.choice_answer %>
+
+<%= link_to"編集する",edit_admin_question_path(@question), class:"btn btn-sm btn-success"%>
