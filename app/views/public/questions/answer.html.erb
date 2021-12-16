@@ -1,2 +1,3 @@
 <%= @question.choice_answer %>
+<%= @question.explanation %>
 <%= link_to 'next', questions_path(genre: @question.genre.name, exclude_q_ids: @exclude_q_ids) %>
