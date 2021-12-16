@@ -1,20 +1,22 @@
 <h1>index</h1>
-<%= @genre %>
+<%= @genre.name %>
 
-<% @questions.each do |question| %>
-  <p>問題:<%= question.question %></p>
+  <p>問題:<%= @question.question %></p>
   <% n = rand(2) %>
   <% if n == 0 %>
-    選択肢:<%= question.choice_answer %><br>
-    選択肢:<%= question.choice_1 %><br>
-    選択肢:<%= question.choice_2 %><br>
+    選択肢:<%= @question.choice_answer %><br>
+    選択肢:<%= @question.choice_1 %><br>
+    選択肢:<%= @question.choice_2 %><br>
   <% elsif n == 1 %>
-    選択肢:<%= question.choice_1 %><br>
-    選択肢:<%= question.choice_2 %><br>
-    選択肢:<%= question.choice_answer %><br>
+    選択肢:<%= @question.choice_1 %><br>
+    選択肢:<%= @question.choice_2 %><br>
+    選択肢:<%= @question.choice_answer %><br>
   <% else %>
-    選択肢:<%= question.choice_2 %><br>
-    選択肢:<%= question.choice_answer %><br>
-    選択肢:<%= question.choice_1 %><br>
+    選択肢:<%= @question.choice_2 %><br>
+    選択肢:<%= @question.choice_answer %><br>
+    選択肢:<%= @question.choice_1 %><br>
   <% end %>
-<% end %>
+  
+  
+  
+  <%= link_to "answer", question_answer_path(@question, exclude_q_ids: @exclude_q_ids) %>

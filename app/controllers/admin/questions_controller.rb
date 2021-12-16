@@ -12,6 +12,7 @@ class Admin::QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    @genre = G
   end
 
   def index

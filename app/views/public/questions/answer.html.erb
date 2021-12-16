@@ -1,0 +1,17 @@
+<%= @question.choice_answer %>
+<%= @question.explanation %>
+<%= link_to 'next', questions_path(genre: @question.genre.name, exclude_q_ids: @exclude_q_ids) %>
+
+<% if Favorite.where(customer: current_customer, question_id: @question.id).exists? %>
+  <p>
+    <%= link_to  question_favorites_path(@question), method: :delete do %>
+      ♥ いいね
+    <% end %>
+  </p>
+  <% else %>
+  <p>
+    <%= link_to  question_favorites_path(@question), method: :post do %>
+      ♡ いいね
+    <% end %>
+  </p>
+<% end %>
