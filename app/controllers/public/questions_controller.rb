@@ -11,7 +11,7 @@ class Public::QuestionsController < ApplicationController
         questions.delete(id)
       end
        @question = Question.find(questions.sample)
-       @exclude_q_ids  = params[:exclude_q_ids].push(@question.id)
+       @exclude_q_ids = params[:exclude_q_ids].push(@question.id)
     else
        @question = Question.find(Question.where(genre_id:@genre.id).pluck(:id).sample)
        @exclude_q_ids = [@question.id]
@@ -19,7 +19,6 @@ class Public::QuestionsController < ApplicationController
   end
 
   def answer
-
     @question = Question.find(params[:question_id])
     @exclude_q_ids = params[:exclude_q_ids]
 
