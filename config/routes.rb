@@ -18,6 +18,7 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
     root "homes#top"
     resources :questions, only: [:index, :show] do 
       get :answer
+      resource :favorites, only: [:create, :index, :destroy]
     end
   end
 

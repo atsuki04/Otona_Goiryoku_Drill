@@ -4,8 +4,7 @@ class Public::QuestionsController < ApplicationController
     @genre = Genre.find_by(name: params[:genre])
     if params[:exclude_q_ids].try(:count) == Question.where(genre_id:@genre.id).count
       redirect_to root_path, alert: "finish"
-    end
-    if params[:exclude_q_ids]
+    elsif params[:exclude_q_ids]
       questions = Question.where(genre_id:@genre.id).pluck(:id)
       params[:exclude_q_ids].each do |id|
         questions.delete(id)
