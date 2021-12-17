@@ -7,11 +7,16 @@ class Public::FavoritesController < ApplicationController
   end
 
   def destroy
-   @question = Question.find(params[:question_id])
+    @question = Question.find(params[:question_id])
     @favorite = current_customer.favorites.find_by(question_id: @question.id)
     @favorite.destroy
     redirect_to question_answer_path(@question)
   end
 
+  #def favorites
+    #@customer = Customer.find_by(id: params[:id])
+    #@favorites = Favorite.where(customer_id: @customer.id)
+    
+  #end  
 
 end

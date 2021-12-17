@@ -13,12 +13,13 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
     resources :genres, only: [:index, :create, :edit, :update]
     resources :questions, only: [:index, :new, :create, :show, :edit, :update]
   end
-  
+
   scope module: :public do
     root "homes#top"
-    resources :questions, only: [:index, :show] do 
+    #get "customers/:id/favolites" => "customers#favorites"
+    resources :questions, only: [:index, :show] do
       get :answer
-      resource :favorites, only: [:create, :index, :destroy]
+      resource :favorites, only: [:create, :destroy]
     end
   end
 
