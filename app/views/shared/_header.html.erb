@@ -1,0 +1,21 @@
+<header class="shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+    <%= link_to "大人の語彙力ドリル", root_path, id: "logo", class: "nav-link text-dark" %>
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="nav navbar-nav navbar-right">
+          <% if customer_signed_in? %>
+            <li><%= link_to "Home",   root_path, class: "nav-link text-dark" %></li>
+            <li><%= link_to "Log out", destroy_customer_session_path, method: :delete, class: "nav-link text-dark" %></li>
+          <% else %>
+            <li><%= link_to "Home", root_path, class: "nav-link text-dark" %></li>
+            <li><%= link_to "Log in", new_customer_session_path, class: "nav-link text-dark" %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
