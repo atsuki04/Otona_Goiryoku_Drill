@@ -13,10 +13,8 @@ class Public::FavoritesController < ApplicationController
     redirect_to question_answer_path(@question)
   end
 
-  #def favorites
-    #@customer = Customer.find_by(id: params[:id])
-    #@favorites = Favorite.where(customer_id: @customer.id)
-    
-  #end  
+  def my_favorites
+    @favorites = current_customer.favorites
+  end  
 
 end
