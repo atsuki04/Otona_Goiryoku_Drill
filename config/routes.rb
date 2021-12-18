@@ -16,11 +16,11 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 
   scope module: :public do
     root "homes#top"
-    #get "customers/:id/favolites" => "customers#favorites"
     resources :questions, only: [:index, :show] do
       get :answer
       resource :favorites, only: [:create, :destroy]
     end
+    get :favorites, to: 'favorites#my_favorites', as:'my_favorites'
   end
 
 end
