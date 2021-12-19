@@ -21,6 +21,7 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
       resource :favorites, only: [:create, :destroy]
     end
     get :favorites, to: 'favorites#my_favorites', as:'my_favorites'
+    get 'search' => 'questions#search'
   end
 
 end

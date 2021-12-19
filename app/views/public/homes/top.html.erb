@@ -1,3 +1,16 @@
+<div class="search-form">
+  <%= form_with url: search_path, method: :get, local: true do |f| %>
+    <%= f.text_field :keyword, value: @keyword %>
+    <%= f.submit "問題を検索" %>
+  <% end %>
+</div>
+
+<div class="question-list">
+  <% @questions.each do |question| %>
+    <%= question.question %>
+  <% end %>  
+</div>
+
 <p class="h1">大人の語彙力ドリル</p>
 <%= link_to '仕事', questions_path(genre: '仕事'), class: "btn btn-success" %>
 <%= link_to '会食', questions_path(genre: '会食'), class: "btn btn-warning " %>

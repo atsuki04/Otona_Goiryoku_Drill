@@ -20,7 +20,12 @@ class Public::QuestionsController < ApplicationController
   def answer
     @question = Question.find(params[:question_id])
     @exclude_q_ids = params[:exclude_q_ids]
+  end
 
+  def search
+    @questions = Question.search(params[:keyword])
+    @keyword = params[:keyword]
+    render "public/homes/top"
   end
 
 end
