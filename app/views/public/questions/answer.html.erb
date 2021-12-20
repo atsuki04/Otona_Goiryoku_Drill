@@ -1,17 +1,22 @@
-<%= @question.choice_answer %>
-<%= @question.explanation %>
-<%= link_to 'next', questions_path(genre: @question.genre.name, exclude_q_ids: @exclude_q_ids) %>
+<h4 class="mt-4 text-center">
+  <% if customer_signed_in? %>
+    <%= render 'shared/favorite', question: @question %>
+  <% end %>
+</h4>
 
-<% if Favorite.where(customer: current_customer, question_id: @question.id).exists? %>
-  <p>
-    <%= link_to  question_favorites_path(@question), method: :delete do %>
-      ♥ いいね
-    <% end %>
-  </p>
-  <% else %>
-  <p>
-    <%= link_to  question_favorites_path(@question), method: :post do %>
-      ♡ いいね
-    <% end %>
-  </p>
-<% end %>
+<div class="container p-2 pb-5">
+  <h3 class="m-3 p-3 text-center"><解答></h3>
+  <div class="border border-danger text-center mx-5 p-4">
+  <%= @question.choice_answer %>
+  </div>
+</div>
+
+<div class="container mt-5 pt-2 pb-5">
+  <h3 class="m-3 p-3 text-center"><解説></h3>
+  <div class="border border-primary text-center mx-5 p-4">
+　  <%= @question.explanation %>
+　</div>
+</div>
+<div class="mt-5 text-center">
+<%= link_to "次へ", questions_path(genre: @question.genre.name, exclude_q_ids: @exclude_q_ids), class:"btn btn-lg btn-success" %>
+</div>

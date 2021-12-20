@@ -1,0 +1,15 @@
+<% if Favorite.where(customer: current_customer, question_id: question.id).exists? %>
+  <p>
+    問題をお気に入り
+    <%= link_to  question_favorites_path(question), method: :delete do %>
+      <i class="fas fa-star"></i>
+    <% end %>
+  </p>
+<% else %>
+  <p>
+    問題をお気に入り 
+    <%= link_to  question_favorites_path(question), method: :post do %>
+      <i class="far fa-star"></i>
+    <% end %>
+  </p>
+<% end %>  

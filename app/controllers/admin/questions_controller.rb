@@ -26,6 +26,7 @@ class Admin::QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     @question.update(question_params)
+    render "show"
 
   end
 
