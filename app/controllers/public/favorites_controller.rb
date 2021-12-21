@@ -1,4 +1,5 @@
 class Public::FavoritesController < ApplicationController
+  before_action :authenticate_customer!
 
   def create
     @question = Question.find(params[:question_id])
