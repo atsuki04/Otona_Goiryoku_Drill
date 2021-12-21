@@ -8,13 +8,9 @@
     <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_1 %></div><br>
     <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_2 %></div><br>
   <% elsif n == 1 %>
-    <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_answer %></div><br>
-    <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_1 %></div><br>
-    <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_2 %></div><br>
+    <%= render 'shared/choice', question: @question %>
   <% else %>
-    <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_answer %></div><br>
-    <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_1 %></div><br>
-    <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_2 %></div><br>
+    <%= render 'shared/choice', question: @question %>
   <% end %>
 
   <div class="text-center">

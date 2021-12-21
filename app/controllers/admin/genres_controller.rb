@@ -31,10 +31,14 @@ class Admin::GenresController < ApplicationController
     else
        render :edit
     end
+  end  
     
+  def destroy
+    @genre = Genre.find(params[:id])
+    @genre.destroy
+    redirect_to admin_genres_path
   end
 
-  # 投稿データのストロングパラメータ
   private
 
   def genre_params
