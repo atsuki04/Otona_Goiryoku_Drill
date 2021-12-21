@@ -11,11 +11,13 @@
               <li><%= link_to "Home", root_path, class: "nav-link text-white" %></li>
               <li><%= link_to "My Favorites", my_favorites_path, class: "nav-link text-white" %></li>
               <li><%= link_to "Log out", destroy_customer_session_path, method: :delete, class: "nav-link text-white" %></li>
+              <li><%= link_to "Inquiry", inquiry_index_path, class: "nav-link text-white" %></li>
             <% elsif admin_signed_in? %>
-              <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "nav-link text-white" %></li>
+              <li><%= link_to "Log out", destroy_admin_session_path, method: :delete, class: "nav-link text-white" %></li>
             <% else %>
               <li><%= link_to "Home", root_path, class: "nav-link text-white" %></li>
               <li><%= link_to "Log in", new_customer_session_path, class: "nav-link text-white" %></li>
+              <li><%= link_to "Inquiry", inquiry_index_path, class: "nav-link text-white" %></li>
             <% end %>
           </ul>
       </div>
