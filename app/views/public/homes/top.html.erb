@@ -1,4 +1,47 @@
-<p class="h1">大人の語彙力ドリル</p>
-<%= link_to '仕事', questions_path(genre: '仕事'), class: "btn btn-success" %>
-<%= link_to '会食', questions_path(genre: '会食'), class: "btn btn-warning " %>
-<%= link_to '日常会話', questions_path(genre: '日常会話'), class: "btn btn-primary" %>
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading"><i class="fas fa-edit fa-sm fa-spin"></i> 大人の語彙力ドリル <i class="fas fa-edit fa-sm fa-spin"></i></h1>
+    <h4 class="text-muted pt-2">〜３択ドリルで美しい大人の語彙力を磨いていきましょう！〜</h4>
+    <br>
+    <p class="lead text-muted">※ログインしていただくと問題のお気に入りが可能になります！</p>
+  </div>
+</section>
+
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <%= image_tag 'work.jpg', class: 'card-img-top' %>
+            <div class="card-body">
+              <div class="text-center">
+                <%= link_to '仕事', questions_path(genre: '仕事'), class: "btn btn-lg btn-outline-secondary" %>
+              </div>
+            </div>
+        </div>
+      </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <%= image_tag 'dinner.jpg', class: 'card-img-top' %>
+            <div class="card-body">
+              <div class="text-center">
+                <%= link_to '会食', questions_path(genre: '会食'), class: "btn btn-lg btn-outline-secondary" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <%= image_tag 'life.jpg', class: 'card-img-top' %>
+            <div class="card-body">
+              <div class="text-center">
+                <%= link_to '日常会話', questions_path(genre: '日常会話'), class: "btn btn-lg btn-outline-secondary" %>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<h5 class="text-center mt-2"><%= notice %></h5>

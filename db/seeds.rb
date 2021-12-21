@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Admin.create!(
+   email: 'osuga@a',
+   password: 'atsuki'
+)   
+
+
 genres = ['仕事', '会食', '日常会話']
 
 genres.each do |genre|

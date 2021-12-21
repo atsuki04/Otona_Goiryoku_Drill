@@ -1,21 +1,36 @@
-<header class="shadow-sm">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
-    <%= link_to "大人の語彙力ドリル", root_path, id: "logo", class: "nav-link text-dark" %>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="nav navbar-nav navbar-right">
-          <% if customer_signed_in? %>
-            <li><%= link_to "Home",   root_path, class: "nav-link text-dark" %></li>
-            <li><%= link_to "Log out", destroy_customer_session_path, method: :delete, class: "nav-link text-dark" %></li>
-          <% else %>
-            <li><%= link_to "Home", root_path, class: "nav-link text-dark" %></li>
-            <li><%= link_to "Log in", new_customer_session_path, class: "nav-link text-dark" %></li>
-          <% end %>
-        </ul>
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">３択クイズに答えて大人の丁寧な語彙力が<br>学べるサイトです<p>
+        </div>
+          <ul class="nav navbar-nav navbar-right">
+            <% if customer_signed_in? %>
+              <li><%= link_to "Home", root_path, class: "nav-link text-white" %></li>
+              <li><%= link_to "My Favorites", my_favorites_path, class: "nav-link text-white" %></li>
+              <li><%= link_to "Log out", destroy_customer_session_path, method: :delete, class: "nav-link text-white" %></li>
+              <li><%= link_to "Inquiry", inquiry_index_path, class: "nav-link text-white" %></li>
+            <% elsif admin_signed_in? %>
+              <li><%= link_to "Log out", destroy_admin_session_path, method: :delete, class: "nav-link text-white" %></li>
+            <% else %>
+              <li><%= link_to "Home", root_path, class: "nav-link text-white" %></li>
+              <li><%= link_to "Log in", new_customer_session_path, class: "nav-link text-white" %></li>
+              <li><%= link_to "Inquiry", inquiry_index_path, class: "nav-link text-white" %></li>
+            <% end %>
+          </ul>
       </div>
     </div>
-  </nav>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="/" class="navbar-brand d-flex align-items-center">
+        <i class="fas fa-edit"></i><strong>Otona_Goiryoku_Drill</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
 </header>

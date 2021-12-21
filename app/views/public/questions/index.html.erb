@@ -1,22 +1,18 @@
-<h1>index</h1>
-<%= @genre.name %>
+<h2 class="text-center mt-4"><i class="fas fa-user-graduate"></i> <%= @genre.name %>のドリル <i class="fas fa-user-graduate"></i></h2>
 
-  <p>問題:<%= @question.question %></p>
-  <% n = rand(2) %>
+<h3 class="border border-4 border-danger text-center m-5 p-5"><問題><br><br><%= @question.question %></h3>
+
+<% n = rand(2) %>
   <% if n == 0 %>
-    選択肢:<%= @question.choice_answer %><br>
-    選択肢:<%= @question.choice_1 %><br>
-    選択肢:<%= @question.choice_2 %><br>
+    <div class="btn btn-lg btn-outline-secondary m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_answer %></div><br>
+    <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_1 %></div><br>
+    <div class="btn btn-lg btn-outline-secondary text-center m-3 px-5 py-3 d-block">選択肢 : <%= @question.choice_2 %></div><br>
   <% elsif n == 1 %>
-    選択肢:<%= @question.choice_1 %><br>
-    選択肢:<%= @question.choice_2 %><br>
-    選択肢:<%= @question.choice_answer %><br>
+    <%= render 'shared/choice', question: @question %>
   <% else %>
-    選択肢:<%= @question.choice_2 %><br>
-    選択肢:<%= @question.choice_answer %><br>
-    選択肢:<%= @question.choice_1 %><br>
+    <%= render 'shared/choice', question: @question %>
   <% end %>
-  
-  
-  
-  <%= link_to "answer", question_answer_path(@question, exclude_q_ids: @exclude_q_ids) %>
+
+  <div class="text-center">
+    <%= link_to "解答へ", question_answer_path(@question, exclude_q_ids: @exclude_q_ids), class:"btn btn-success " %>
+  </div>  

@@ -59,10 +59,9 @@ ActiveRecord::Schema.define(version: 2021_12_16_083308) do
     t.string "choice_2"
     t.string "choice_answer"
     t.string "explanation"
-    t.integer "genre_id"
+    t.bigint "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["genre_id"], name: "index_questions_on_genre_id"
   end
 
 end

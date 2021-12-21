@@ -1,4 +1,5 @@
 class Admin::QuestionsController < ApplicationController
+  before_action :authenticate_admin!
 
   def new
     @question = Question.new
@@ -26,6 +27,7 @@ class Admin::QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     @question.update(question_params)
+    render "show"
 
   end
 

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'inquiry/index'
+  post 'inquiry/confirm'
+  post 'inquiry/thanks'
 devise_for :customers,skip: [:passwords,], controllers: {
   registrations: "public/registrations",
   sessions: 'public/sessions'
@@ -10,7 +13,7 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
 }
   namespace :admin do
     root "homes#top"
-    resources :genres, only: [:index, :create, :edit, :update]
+    resources :genres, only: [:index, :create, :edit, :update, :destroy]
     resources :questions, only: [:index, :new, :create, :show, :edit, :update]
   end
 
@@ -21,6 +24,7 @@ devise_for :admin, skip: [:registrations, :passwords] ,controllers: {
       resource :favorites, only: [:create, :destroy]
     end
     get :favorites, to: 'favorites#my_favorites', as:'my_favorites'
+    get 'search' => 'questions#search'
   end
 
 end
