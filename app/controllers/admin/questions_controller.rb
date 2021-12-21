@@ -1,4 +1,5 @@
 class Admin::QuestionsController < ApplicationController
+  before_action :authenticate_admin!
 
   def new
     @question = Question.new
