@@ -1,4 +1,19 @@
-<h2>問題一覧</h2>
+<h2 class="m-5">問題一覧</h2>
 <% @questions.each do |question| %>
-  <%= link_to question.question, admin_question_path(question) %>
+
+  <table class='table table-hover table-inverse m-5 text-center'>
+    <thead>
+      <tr>
+        <th>ジャンル</th>
+        <th>問題</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td> <%= question.genre.name %></td>
+        <td><%= link_to question.question, admin_question_path(question) %></td>
+      </tr>
+    </tbody>
+  </table>
+ 
 <% end %>

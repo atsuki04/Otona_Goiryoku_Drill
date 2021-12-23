@@ -1,5 +1,6 @@
+<h2 class="m-5">問題の詳細</h2>
 
-  <h2>問題の詳細</h2>
+<div class="container m-5">
   <h4>問題</h4>
   <%= @question.question %>
   <h4>ジャンル</h4>
@@ -12,6 +13,8 @@
   <%= @question.choice_answer %>
   <h4>解説</h4>
   <%= @question.explanation %>
-  <br>
+</div>
   
+<div class="text-center mr-5">  
   <%= link_to"編集する",edit_admin_question_path(@question), class:"btn btn-success"%>
+</div>
