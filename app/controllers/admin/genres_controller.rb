@@ -16,7 +16,6 @@ class Admin::GenresController < ApplicationController
 
   def index
     @genres = Genre.all
-    #@genres = Genre.page(params[:page]).reverse_order
     @genre = Genre.new
   end
 
