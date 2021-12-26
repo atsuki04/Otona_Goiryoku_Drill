@@ -25,7 +25,7 @@
 - 丁寧な言葉を使えるように勉強したいなと思った際に楽しく学習することができます。
 
 ## 設計書
-- ER図 : 
+- ER図 : https://drive.google.com/file/d/1sPafezOrL_-fL1ivz3cGjz7IabIRrkNs/view?usp=sharing
 - テーブル定義書 : https://docs.google.com/spreadsheets/d/1ppRVpMOle4N20GtQztLfaz8WlyojL46LA5ZDeEcjOIU/edit#gid=602702626
 - 詳細設計書 : https://docs.google.com/spreadsheets/d/1CW_LCrJfJWPhvK4_t5iEMQhusLzdRrzPU1rKztDUbAw/edit#gid=2133469642
 
