@@ -18,6 +18,7 @@ class Admin::QuestionsController < ApplicationController
 
   def index
     @questions = Question.all
+    @filtered_questions = []
   end
 
   def edit
@@ -28,9 +29,14 @@ class Admin::QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @question.update(question_params)
     render "show"
-
   end
 
+  def search
+    @questions = Question.all
+    @filtered_questions = Question.search(params[:keyword])
+    @keyword = params[:keyword]
+    render "admin/questions/index"
+  end
 
   private
     def question_params

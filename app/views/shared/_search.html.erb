@@ -1,14 +1,16 @@
-
-<div class="search-form">
-  <%= form_with url: search_path, method: :get, local: true do |f| %>
+<div class="search-form m-5">
+  <%= form_with url: admin_search_path, method: :get, local: true do |f| %>
     <%= f.text_field :keyword, value: keyword %>
     <%= f.submit "検索" %>
   <% end %>
 </div>
-<div class="question-list">
+
+<div class="question-list m-5">
   <% questions.each do |question| %>
-    <%= question.genre.name %>
-    <%= question.question  %>
-    <%= question.choice_answer %>
+    <p>
+      <%= question.genre.name %>
+      <%= link_to question.question, admin_question_path(question) %>
+      <%= question.choice_answer %>
+    </p>
   <% end %>
 </div>
