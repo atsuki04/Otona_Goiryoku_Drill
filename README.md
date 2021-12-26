@@ -25,7 +25,9 @@
 - 丁寧な言葉を使えるように勉強したいなと思った際に楽しく学習することができます。
 
 ## 設計書
-<...>
+- ER図 : https://app.diagrams.net/?pages=1&sketch=1#G1sPafezOrL_-fL1ivz3cGjz7IabIRrkNs
+- テーブル定義書 : https://docs.google.com/spreadsheets/d/1ppRVpMOle4N20GtQztLfaz8WlyojL46LA5ZDeEcjOIU/edit#gid=602702626
+- 詳細設計書 : https://docs.google.com/spreadsheets/d/1CW_LCrJfJWPhvK4_t5iEMQhusLzdRrzPU1rKztDUbAw/edit#gid=2133469642
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1KUJ3mJBVizYaZTJWbbPPcHS0skJlHrlKBW9A3Ha-Ikk/edit?usp=sharing
@@ -36,3 +38,6 @@ https://docs.google.com/spreadsheets/d/1KUJ3mJBVizYaZTJWbbPPcHS0skJlHrlKBW9A3Ha-
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
 - IDE：Cloud9
+
+## 使用素材
+- unsplash : https://unsplash.com/s/photos/meeteing
