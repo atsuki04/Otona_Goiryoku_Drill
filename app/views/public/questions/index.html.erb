@@ -14,5 +14,5 @@
   <% end %>
 
   <div class="text-center">
-    <%= link_to "解答へ", question_answer_path(@question, exclude_q_ids: @exclude_q_ids), class:"btn btn-success " %>
-  </div>  
+    <%= link_to "解答へ", question_answer_path(@question, que_id: @que.id), class: "btn btn-success" %>
+  </div>
