@@ -1,6 +1,8 @@
 <h5 class="mt-4 text-center">
   <% if customer_signed_in? %>
-    <%= render 'shared/favorite', question: @question %>
+    <div id="favorite_buttons_<%= @question.id %>">
+      <%= render 'shared/favorite', question: @question %>
+    </div>  
   <% end %>
 </h5>
 
