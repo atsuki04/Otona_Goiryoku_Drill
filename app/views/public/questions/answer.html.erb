@@ -1,6 +1,8 @@
 <h5 class="mt-4 text-center">
   <% if customer_signed_in? %>
-    <%= render 'shared/favorite', question: @question %>
+    <div id="favorite_buttons_<%= @question.id %>">
+      <%= render 'shared/favorite', question: @question %>
+    </div>  
   <% end %>
 </h5>
 
@@ -18,5 +20,5 @@
 　</div>
 </div>
 <div class="mt-5 text-center">
-<%= link_to "次へ", questions_path(genre: @question.genre.name, exclude_q_ids: @exclude_q_ids), class:"btn btn-lg btn-success" %>
+<%= link_to "次へ", questions_path(genre: @question.genre.name, que_id: @que_id), class:"btn btn-lg btn-success" %>
 </div>
