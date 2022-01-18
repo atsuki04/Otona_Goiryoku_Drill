@@ -2,19 +2,19 @@
 <table class="table table-hover table-bordered table-inverse">
   <%= form_with model: @question, url: admin_questions_path, local:true do |f| %>
     <div class="text-center m-3 p-3">
-      <%= f.text_area :question ,placeholder: "問題" %>
+      <%= f.text_area :question, :size=>"60x6", placeholder: "問題" %>
     </div>
     <div class="text-center m-3 p-3">
-      <%= f.text_field :choice_1 ,placeholder: "選択肢1" %>
+      <%= f.text_field :choice_1, :size=>"60", placeholder: "選択肢1" %>
     </div>
     <div class="text-center m-3 p-3">
-      <%= f.text_field :choice_2 ,placeholder: "選択肢2" %>
+      <%= f.text_field :choice_2, :size=>"60", placeholder: "選択肢2" %>
     </div>
     <div class="text-center m-3 p-3">
-      <%= f.text_field :choice_answer ,placeholder: "正解の選択肢" %>
+      <%= f.text_field :choice_answer, :size=>"60", placeholder: "正解の選択肢" %>
     </div>
     <div class="text-center m-3 p-3">
-      <%= f.text_area :explanation ,placeholder: "解説" %>
+      <%= f.text_area :explanation, :size=>"60x6", placeholder: "解説" %>
     </div>
     <div class="text-center m-3 p-3">  
       <%= f.collection_select :genre_id, Genre.all, :id, :name %>
