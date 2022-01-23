@@ -8,16 +8,16 @@
 
 <div class="container p-2 pb-5">
   <h3 class="m-3 p-3 text-center"><解答></h3>
-  <div class="border border-danger text-center mx-5 p-4">
+  <h5 class="border border-danger text-center mx-5 p-4">
   <%= @question.choice_answer %>
-  </div>
+  </h5>
 </div>
 
 <div class="container mt-5 pt-2 pb-5">
   <h3 class="m-3 p-3 text-center"><解説></h3>
-  <div class="border border-primary text-center mx-5 p-4">
+  <h5 class="border border-primary text-center mx-5 p-4">
 　  <%= @question.explanation %>
-　</div>
+　</h5>
 </div>
 <div class="mt-5 text-center">
 <%= link_to "次へ", questions_path(genre: @question.genre.name, que_id: @que_id), class:"btn btn-lg btn-success" %>
