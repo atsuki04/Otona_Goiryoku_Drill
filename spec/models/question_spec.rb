@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Question モデルのテスト', type: :model do
+RSpec.describe 'Questionモデルのテスト', type: :model do
   it "有効な問題の場合は保存されるか" do
     expect(FactoryBot.build(:question)).to be_valid
   end
