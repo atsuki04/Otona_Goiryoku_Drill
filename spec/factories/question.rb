@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :list do
+  factory :question do
     question { Faker::Lorem.characters(number:10) }
     choice_1 { Factory::Lorem.characters(number:10) }
     choice_2 { Factory::Lorem.characters(number:10) }
