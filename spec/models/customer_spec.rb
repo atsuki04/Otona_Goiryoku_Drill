@@ -6,6 +6,6 @@ RSpec.describe 'Customerモデルのテスト', type::model do
   describe 'バリデーションのテスト' do
     subject { customer.valid? }
     
-    let!(:other_user) {
+    let!(:other_user) { 
   end  
 end
